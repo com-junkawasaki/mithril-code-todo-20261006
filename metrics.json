@@ -1,0 +1,22 @@
+{
+  "build_id": "run-4g77WK",
+  "development": {
+    "owner": "starter + user",
+    "wall_seconds": null,
+    "model_tokens": null,
+    "model_cost_usd": null
+  },
+  "jev": {
+    "scope": "Completion toggle and unfinished count only; UI is a starter.",
+    "runner_seconds": 3.002443042,
+    "decisions": 8,
+    "attempts": 1,
+    "input_tokens": 8842,
+    "output_tokens": 406,
+    "api_cost_usd": 0.000371364,
+    "receipt_sha256": "6e8573d8a2bbfb06d69f15ced144e06d52e0609617f3bb2162eed27646776a6f"
+  },
+  "policy": {
+    "wasm_sha256": "ad69eb3a3768cc95aef3429c414ea6acfbf7dc778ffa7d48a597f737dc0b8f8c"
+  }
+}
