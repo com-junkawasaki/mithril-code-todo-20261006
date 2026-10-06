@@ -1,7 +1,7 @@
-# Mithril Code To-do project
+# Mithril TodoMVC comparison implementation
 
-Completion toggle and unfinished-count functions were assembled by the stage-aware Jev/Mithril harness. Two locked CLJK verifiers check toggle behavior, retained source markers and 511 completion-state vectors. The exact chosen typed AST is replayed against retained CLJK source before export. The browser's primitive evaluator executes only the exported subset; this is not full Mithril runtime qualification.
+Serve this directory over HTTP; no compilation is required for the exported browser app. The existing Mithril/Jev harness emits typed completion-toggle and unfinished-count ASTs under logic.json and retained CLJK under sources/. core.js interprets that bounded AST. UI, editing, bulk completion, deletion, hash routing and localStorage are plain host JavaScript, not additional Jev-generated code. policy.wasm digest is verified at startup; it is not used for every UI operation in this standard comparison mode.
 
-The UI/storage are starter implementations. User edits to UI or JavaScript are outside the Jev acceptance proof. `metrics.json` measures only the model/kernel task, not full app development or publication cost. No model calls occur when using the exported app. User tasks stay in this browser's localStorage.
+The DOM and unchanged official TodoMVC common/app CSS follow https://github.com/tastejs/todomvc/blob/master/app-spec.md. TodoMVC CSS/common packages are pinned in package.json with MIT notices in LICENSE.todomvc. Mithril starter is Apache-2.0; the retained policy artifact license is LICENSE.mithril-policy.
 
-The policy Wasm is compiled from Kotoba and distributed with its MIT license. Starter sources retain their Apache-2.0 attribution. GitHub Pages serves the static project root, with `.nojekyll` and relative asset paths.
+Persistence uses todos-mithril with id/title/completed. Previously saved Mithril sample tasks are migrated once when this key is absent; the old key is retained. New profiles start empty. Editing state is never persisted. Official submission, all-browser support and Speedometer upstream inclusion are not implied by local conformance tests. Runtime measurements must name the benchmark/workload and environment.
